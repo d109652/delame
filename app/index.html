@@ -33,22 +33,50 @@
 <header>
     <section class="header__top">
         <img src="" alt="#" class="logo">
-        <p class="work-hours">
-            <i></i>
-            <span>Время работы: <br>ежедневно 09:00 - 21:00</span>
-        </p>
-        <p class="address">
-            <a href="#">
-                <i></i>
-                <span>г.Долгопрудный, Лихачевский проспект, 70к4</span>
-            </a>
-        </p>
-        <p class="phone">
-            <a href="tel:+74987446611">
-                <i></i>
-                <span>+7(498)744-66-11</span>
-            </a>
-        </p>
+        <ul class="contacts__list">
+            <li class="contacts__item work-hours">
+                <a href="#">
+                    <i class="fas fa-clock"></i>
+                    <span>Время работы: <br>ежедневно 09:00 - 21:00</span>
+                </a>
+            </li>
+            <li class="contacts__item address">
+                <a href="#">
+                    <i class="fas fa-location-arrow"></i>
+                    <span>г.Долгопрудный, Лихачевский проспект, 70к4</span>
+                </a>
+            </li>
+            <li class="contacts__item phone">
+                <a href="tel:+74987446611">
+                    <i class="fas fa-mobile"></i>
+                    <span>+7(498)744-66-11</span>
+                </a>
+            </li>
+        </ul>
+        <div class="social social--header">
+            <h6 class="hidden">Социальные сети</h6>
+            <ul class="social__list">
+                <li>
+                    <a href="#" class="white-hover" target="_blank" rel="noopener">
+                        <span class="hidden">Вконтакте</span>
+                        <i class="fab fa-vk"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/SE-%D1%81%D1%82%D1%83%D0%B4%D0%B8%D0%BE-152014511589371/"
+                       target="_blank" rel="noopener" class="white-hover">
+                        <span class="hidden">Facebook</span>
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="white-hover" target="_blank" rel="noopener">
+                        <span class="hidden">Instagram</span>
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </section>
     <nav class="nav">
         <ul class="nav__list">
@@ -431,39 +459,112 @@
         <div class="section__wrapper">
             <section class="lead">
                 <h2 class="section__title">Контакты</h2>
-                <div class="section__text">
-                    <p>Мы ценим своих клиентов и стараемся радовать их!
-                        Каждый месяц у нас проходят акции, для постоянных клиентов действует накопительная система скидок. И конечно всегда для вас ароматный чай, кофе, позитивная атмосфера и отличная музыка!</p>
+                <div class="section__text section__text--big-colored">
+                    <p>Всегда рады видеть Вас в нашей студии красоты!</p>
                 </div>
             </section>
-            <section class="reviews">
-                <ul class="reviews__list">
-                    <li class="reviews__item">
-                        <img src="img/reviews1.png" alt="Фотография в отзыве" class="reviews__img">
-                        <p class="reviews__title">Алина</p>
-                        <p class="reviews__text">Мастер Алёна определённо лучший парикмахер в городе. Стрижёмся у неё всей семьёй уже почти 2 года. И сам салон очень нравится, всегда приятно сюда приходить. Успехов всему коллективу!</p>
-                    </li>
-                    <li class="reviews__item">
-                        <img src="img/reviews2.png" alt="Фотография в отзыве" class="reviews__img">
-                        <p class="reviews__title">Женя</p>
-                        <p class="reviews__text">По рекомендации подруги ходила на маникюр с шеллаком к Вале, все очень понравилось. Выбор цветов впечатляет, глаза разбегаются! А ещё в этом салоне я узнала, что бывает бразильский маникюр... (читать далее)</p>
-                    </li>
-                    <li class="reviews__item">
-                        <img src="img/reviews3.png" alt="Фотография в отзыве" class="reviews__img">
-                        <p class="reviews__title">Мария</p>
-                        <p class="reviews__text">Девочки! Рекомендую !!! Очень хороший салон и вчера я еще раз в этом убедилась . Раньше ходила только на маникюр, а вчера решилась на окрашивание и стрижку у парикмахера Юлии.... (читать далее)</p>
-                    </li>
-                    <li class="reviews__item">
-                        <img src="img/reviews4.png" alt="Фотография в отзыве" class="reviews__img">
-                        <p class="reviews__title">Наталия</p>
-                        <p class="reviews__text">Салонов в городе очень много, поэтому долго мучилась вопросом куда именно пойти. Почитала отзывы, и остановила выбор на De lame. Записалась на татуаж бровей и верхнего века ... (читать далее)</p>
-                    </li>
-                </ul>
-                <button class="button button--orange button--caps">Все отзывы</button>
+            <section class="contacts">
+                <div class="map">
+
+                </div>
+                <div class="contacts__info">
+                    <ul class="contacts__list">
+                        <li class="contacts__item work-hours">
+                            <a href="#">
+                                <i></i>
+                                <span>Время работы: <br>ежедневно 09:00 - 21:00</span>
+                            </a>
+                        </li>
+                        <li class="contacts__item address">
+                            <a href="">
+                                <i></i>
+                                <span>г.Долгопрудный, Лихачевский проспект, 70к4</span>
+                            </a>
+                        </li>
+                        <li class="contacts__item phone">
+                            <a href="tel:+74987446611">
+                                <i></i>
+                                <span>+7(498)744-66-11</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="contacts__feedback">
+                        <form class="send-message" action="#" method="post">
+                            <div class="form-group-wrapper">
+                                <div class="form-group">
+                                    <label>Ваше имя:</label>
+                                    <input type="text" name="first-name" placeholder="Представьтесь, пожалуйста"
+                                           required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Ваш e-mail:</label>
+                                    <input type="email" name="email" placeholder="Для отправки ответа" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Текст письма:</label>
+                                    <textarea rows="5" cols="62" name="text" placeholder="В свободной форме"></textarea>
+                                </div>
+                            </div>
+                            <button class="button button--orange button--small" type="submit">Отправить</button>
+                        </form>
+                    </div>
+                </div>
             </section>
         </div>
     </section>
 </main>
+<footer class="footer">
+    <div class="footer__top">
+        <img src="" alt="#" class="logo">
+    </div>
+    <div class="footer__bottom">
+        <ul class="contacts__list">
+            <li class="contacts__item work-hours">
+                <a href="#">
+                    <span class="contacts__title">Время работы:</span>
+                    <span>09:00 - 21:00 <br>
+                    без выходных
+                    </span>
+                </a>
+            </li>
+            <li class="contacts__item address">
+                <a href="">
+                    <span class="contacts__title">Адрес студии:</span>
+                    <span>МО, г.Долгопрудный, <br> Лихачевский пр.,<br> д.70, корп. 4</span>
+                </a>
+            </li>
+            <li class="contacts__item phone">
+                <span class="contacts__title">Контакты:</span>
+                <a href="tel:+74987446611">7(498)744-66-11</a>
+                <a href="mailto:delame@inbox.ru">delame@inbox.ru</a>
+            </li>
+        </ul>
+        <div class="social social--footer">
+            <h6 class="hidden">Социальные сети</h6>
+            <ul class="social__list">
+                <li>
+                    <a href="#" class="white-hover" target="_blank" rel="noopener">
+                        <span class="hidden">Вконтакте</span>
+                        <i class="fab fa-vk"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/SE-%D1%81%D1%82%D1%83%D0%B4%D0%B8%D0%BE-152014511589371/"
+                       target="_blank" rel="noopener" class="white-hover">
+                        <span class="hidden">Facebook</span>
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="white-hover" target="_blank" rel="noopener">
+                        <span class="hidden">Instagram</span>
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
 
 <script src="js/scripts.min.js"></script>
 
