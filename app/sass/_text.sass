@@ -1,20 +1,40 @@
 @import "vars"
 
-=nav
+=title
   font-family: $font-title
+
+=nav
+  +title
   font-size: 1.2em
   letter-spacing: 0.05em
   font-weight: bold
   text-transform: uppercase
 
-=text--16
-  font-size: 1em
+
+=title--34
+  +title
+  font-size: 2.125em
+  font-weight: bold
   letter-spacing: 0.1em
-  font-weight: normal
+
+=title--30
+  font-size: 1.875em
+
+=title--30b
+  +title--30
+  letter-spacing: 0.1em
+  font-weight: bold
+
+=title--18
+  font-size: 1.125em
+  letter-spacing: 0.1em
 
 =title--16
   font-size: 1.5em
   letter-spacing: 0.07em
+
+=title--16b
+  +title--16
   font-weight: bold
 
 =title--16u
@@ -22,6 +42,30 @@
   text-transform: uppercase
   letter-spacing: 0.1em
 
+=text--16
+  font-size: 1em
+  letter-spacing: 0.1em
+  font-weight: normal
+
 =text--12
   font-size: 0.75em
+
+
+=text--12b
+  +text--12
+  letter-spacing: 0.07em
   font-weight: bold
+
+=text--14
+  font-size: 0.875em
+  letter-spacing: 0.1em
+
+=text--14b
+  +text--14
+  font-weight: bold
+
+=text--14bu
+  font-size: 0.875em
+  letter-spacing: 0.1em
+  font-weight: bold
+  text-transform: uppercase
