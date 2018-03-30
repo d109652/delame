@@ -1,6 +1,7 @@
 @import "fonts"
 @import "libs"
 @import "vars"
+@import "text"
 
 *
 	-webkit-box-sizing: border-box
@@ -42,8 +43,14 @@ body
 	min-width: 320px
 	position: relative
 	line-height: 1.65
-	font-family: $default-font
+	font-family: $font-interface
 	overflow-x: hidden
+
+ul
+	list-style-type: none
+
+a:hover
+	text-decoration: none
 
 .img-responsive
 	display: block
@@ -56,5 +63,20 @@ body
 ::selection
 	background-color: $accent
 	color: #fff
+
+.nav__item a
+	+nav
+
+.section__text
+	+text--16
+
+.red-stripe__title
+	+title--16
+
+.section__title
+	+title--16u
+
+.contacts__item
+	+text--12
 
 @import "media" // Всегда в конце
