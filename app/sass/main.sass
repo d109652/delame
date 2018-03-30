@@ -64,8 +64,20 @@ a:hover
 	background-color: $accent
 	color: #fff
 
+.section__wrapper
+	max-width: 960px
+	margin: 0 auto
+
+.nav__list
+	background-color: $accent
+	display: flex
+	justify-content: space-between
+	margin: 0
+	padding: 0
+
 .nav__item a
 	+nav
+	color: $white
 
 .section__text
 	+text--16
@@ -76,8 +88,19 @@ a:hover
 .section__title
 	+title--16u
 
+.contacts__list
+	display: flex
+
+.header__top
+	display: flex
+
 .contacts__item
-	+text--12
+	+text--12b
+	a
+		color: $accent
+
+.section--contacts .contacts__item
+	+title--18
 
 .button
 	+text--12b
@@ -94,8 +117,15 @@ a:hover
 .masters__position
 	+text--14
 
-.contacts__title
+.contacts__welcome
 	+title--30b
+
+.button--big
+	+text--14bu
+
+.footer__bottom .contacts__title
+	+text--14bu
+
 
 
 @import "media" // Всегда в конце
