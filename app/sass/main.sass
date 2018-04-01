@@ -2,6 +2,8 @@
 @import "libs"
 @import "vars"
 @import "text"
+@import "sonline"
+@import "mmenu"
 
 *
 	-webkit-box-sizing: border-box
@@ -37,6 +39,7 @@ body textarea:required:valid
 
 html, body
 	height: 100%
+	margin: 0
 
 body
 	font-size: 16px
@@ -45,10 +48,16 @@ body
 	line-height: 1.65
 	font-family: $font-interface
 	overflow-x: hidden
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
 
 ul
 	list-style-type: none
 
+a
+	text-decoration: none
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
 a:hover
 	text-decoration: none
 
@@ -134,7 +143,7 @@ a:hover
 .services__item
 	margin-bottom: 50px
 	a
-		margin-right: 30px
+		margin-right: 20px
 		display: flex
 		flex-direction: column
 		align-items: center
@@ -150,17 +159,32 @@ a:hover
 	+text--16
 
 .red-stripe__title
-	+title--24b
+	+title--24
 
 .section__title
 	+title--24u
-	line-height
+
 
 .contacts__list
 	display: flex
 
+.contacts__list--map
+	flex-direction: column
+	border-bottom: 2px solid $accent
+	margin-top: 0
+	li
+		margin-bottom: 20px
+		a
+			color: $black
+
 .header__top
 	display: flex
+	min-height: 75px
+	justify-content: flex-start
+	align-items: center
+
+.logo
+	margin-right: auto
 
 .contacts__item
 	+text--12b
@@ -169,6 +193,7 @@ a:hover
 
 .section--contacts .contacts__item
 	+title--18
+	font-weight: normal
 
 .button
 	+text--12bu
@@ -203,7 +228,7 @@ a:hover
 	color: $white
 	padding: 10px
 	z-index: 2
-	min-width: 130px
+	min-width: 180px
 	margin: 0
 	display: flex
 	align-items: flex-end
@@ -236,13 +261,22 @@ a:hover
 	line-height: 1.3
 
 .masters__name
-	+title--24u
+	+text--16u
+	color: $accent
+	margin: 0
+	margin-top: 10px
 
 .masters__position
 	+text--14
+	margin: 0
+	margin-top: 5px
+	margin-bottom: 10px
+	color: $black
 
 .contacts__welcome
 	+title--30b
+	color: $accent
+	margin: 0
 
 .button--big
 	+text--14bu
@@ -277,6 +311,7 @@ a:hover
 .promo__text
 	+title--24bu
 	color: $blue
+	line-height: 1.8
 
 .button--promo
 	margin: 0 auto
@@ -309,5 +344,109 @@ a:hover
 .slider__logo
 	position: absolute
 	bottom: 50px
+
+.masters__list
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+
+.masters__item
+	margin-right: 30px
+	margin-bottom: 40px
+	a
+		display: flex
+		flex-direction: column
+		align-items: center
+
+.contacts
+	display: flex
+
+.map
+	min-width: 515px
+	max-height: 515px
+	border: 10px solid $accent
+	margin-right: 60px
+	-webkit-border-radius: 3px
+	-moz-border-radius: 3px
+	border-radius: 3px
+
+.section__form-title
+	+title--18
+	font-weight: bold
+	text-transform: uppercase
+	color: $accent
+
+.form-group-wrapper
+	display: flex
+	flex-direction: column
+
+.form-group
+	margin: 5px 0
+	input
+		border: 1px solid $accent
+		width: 100%
+		padding-left: 5px
+		height: 30px
+	textarea
+		border: 1px solid $accent
+		width: 100%
+		padding-left: 5px
+	& *:focus
+		outline: 1px solid $sub-accent
+
+.form-group--two-col
+	display: flex
+	input:first-child
+		margin-right: 10px
+
+.hidden
+	position: absolute
+	width: 1px
+	height: 1px
+	margin: -1px
+	border: 0
+	padding: 0
+	clip: rect(0 0 0 0)
+	overflow: hidden
+
+.contacts__link
+	display: flex
+	align-items: center
+	i
+		font-size: 1.5em
+		margin-right: 10px
+
+.contacts__list--header
+	align-items: center
+	margin: 0
+	.contacts__item
+		margin-right: 20px
+
+.social__list
+	display: flex
+	font-size: 1.5em
+	margin: 0
+	li
+		margin-right: 10px
+		&:last-child
+			margin-right: 0
+	a
+		color: $accent
+
+.footer
+	background-color: $accent
+
+.footer__bottom
+	.contacts__item
+		margin-right: 20px
+	.contacts__title
+		color: $white
+		opacity: 0.5
+	.contacts__data
+		display: block
+		border-top: 1px solid $white
+		color: $white
+		font-weight: normal
+
 
 @import "media" // Всегда в конце
