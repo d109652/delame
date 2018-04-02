@@ -6,447 +6,485 @@
 @import "mmenu"
 
 *
-	-webkit-box-sizing: border-box
-	-moz-box-sizing: border-box
-	box-sizing: border-box
-	&:before, &:after
-		-webkit-box-sizing: border-box
-		-moz-box-sizing: border-box
-		box-sizing: border-box
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+    &:before, &:after
+        -webkit-box-sizing: border-box
+        -moz-box-sizing: border-box
+        box-sizing: border-box
 
 *::-webkit-input-placeholder
-	color: #666
-	opacity: 1
+    color: #666
+    opacity: 1
 
 *:-moz-placeholder
-	color: #666
-	opacity: 1
+    color: #666
+    opacity: 1
 
 *::-moz-placeholder
-	color: #666
-	opacity: 1
+    color: #666
+    opacity: 1
 
 *:-ms-input-placeholder
-	color: #666
-	opacity: 1
+    color: #666
+    opacity: 1
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
-	color: #666
+    color: #666
+
 body input:required:valid,
 body textarea:required:valid
-	color: #666
+    color: #666
 
 html, body
-	height: 100%
-	margin: 0
+    height: 100%
+    margin: 0
 
 body
-	font-size: 16px
-	min-width: 320px
-	position: relative
-	line-height: 1.65
-	font-family: $font-interface
-	overflow-x: hidden
-	-webkit-font-smoothing: antialiased
-	-moz-osx-font-smoothing: grayscale
+    font-size: 16px
+    min-width: 320px
+    position: relative
+    line-height: 1.65
+    font-family: $font-interface
+    overflow-x: hidden
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
 
 ul
-	list-style-type: none
+    list-style-type: none
 
 a
-	text-decoration: none
-	-webkit-font-smoothing: antialiased
-	-moz-osx-font-smoothing: grayscale
+    text-decoration: none
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+
 a:hover
-	text-decoration: none
+    text-decoration: none
 
 .img-responsive
-	display: block
-	max-width: 100%
-	height: auto
+    display: block
+    max-width: 100%
+    height: auto
 
 .text-center
-	text-align: center
+    text-align: center
 
 ::selection
-	background-color: $accent
-	color: #fff
+    background-color: $accent
+    color: #fff
 
 .section__wrapper
-	max-width: 960px
-	margin: 0 auto
+    max-width: 960px
+    margin: 0 auto
 
 .section .section__wrapper
-	padding-top: 80px
-	padding-bottom: 80px
+    padding-top: 80px
+    padding-bottom: 80px
 
 .section--red-stripe .section__wrapper
-	padding: 0
-	display: flex
-	justify-content: space-around
-	align-items: center
+    padding: 0
+    display: flex
+    justify-content: space-around
+    align-items: center
 
 .section--red-stripe
-	background-color: $accent
+    background-color: $accent
 
 .red-stripe__title
-	color: $white
+    color: $white
 
 .header
-	background-image: url("../img/main.png")
-	height: 630px
-	background-position: center
-	background-repeat: no-repeat
-	background-size: cover
-
+    background-image: url("../img/main.png")
+    height: 630px
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
 
 .nav__list
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#990033+0,990033+10,ffffff+10,ffffff+20,990033+20,990033+100 */
-	background: $accent /* Old browsers */
-	background: -moz-linear-gradient(top, $accent 0%, $accent 10%, transparent 10%, transparent 18%, $accent 18%, $accent 100%) /* FF3.6-15 */
-	background: -webkit-linear-gradient(top, $accent 0%,$accent 10%,transparent 10%,transparent 18%,$accent 18%,$accent 100%) /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom, $accent 0%,$accent 10%,transparent 10%,transparent 18%,$accent 18%,$accent 100%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990033', endColorstr='#990033',GradientType=0 ) /* IE6-9 */
-	display: flex
-	justify-content: space-between
-	margin: 0
-	padding: 0
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#990033+0,990033+10,ffffff+10,ffffff+20,990033+20,990033+100 */
+    background: $accent
+    /* Old browsers */
+    background: -moz-linear-gradient(top, $accent 0%, $accent 10%, transparent 10%, transparent 18%, $accent 18%, $accent 100%)
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, $accent 0%, $accent 10%, transparent 10%, transparent 18%, $accent 18%, $accent 100%)
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, $accent 0%, $accent 10%, transparent 10%, transparent 18%, $accent 18%, $accent 100%)
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#990033', endColorstr='#990033', GradientType=0)
+    /* IE6-9 */
+    display: flex
+    justify-content: space-between
+    margin: 0
+    padding: 0
 
 .nav__item
-	height: 78px
-	flex-grow: 1
-	a
-		+nav
-		display: flex
-		justify-content: center
-		align-items: center
-		color: $white
-		width: 100%
-		height: 100%
-		padding: 0 15px
-		&:hover
-			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#990033+0,990033+10,ffffff+10,ffffff+20,990033+20,990033+100 */
-			background: $sub-accent /* Old browsers */
-			background: -moz-linear-gradient(top, $sub-accent 0%, $sub-accent 10%, transparent 10%, transparent 18%, $sub-accent 18%, $sub-accent 90%, transparent 90%) /* FF3.6-15 */
-			background: -webkit-linear-gradient(top, $sub-accent 0%,$sub-accent 10%,transparent 10%,transparent 18%,$sub-accent 18%,$sub-accent 90%, transparent 90%) /* Chrome10-25,Safari5.1-6 */
-			background: linear-gradient(to bottom, $sub-accent 0%,$sub-accent 10%,transparent 10%,transparent 18%,$sub-accent 18%,$sub-accent 90%, transparent 90%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990033', endColorstr='#990033',GradientType=0 ) /* IE6-9 */
+    height: 78px
+    flex-grow: 1
+    a
+        +nav
+        display: flex
+        justify-content: center
+        align-items: center
+        color: $white
+        width: 100%
+        height: 100%
+        padding: 0 15px
+        &:hover
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#990033+0,990033+10,ffffff+10,ffffff+20,990033+20,990033+100 */
+            background: $sub-accent
+            /* Old browsers */
+            background: -moz-linear-gradient(top, $sub-accent 0%, $sub-accent 10%, transparent 10%, transparent 18%, $sub-accent 18%, $sub-accent 90%, transparent 90%)
+            /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, $sub-accent 0%, $sub-accent 10%, transparent 10%, transparent 18%, $sub-accent 18%, $sub-accent 90%, transparent 90%)
+            /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, $sub-accent 0%, $sub-accent 10%, transparent 10%, transparent 18%, $sub-accent 18%, $sub-accent 90%, transparent 90%)
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#990033', endColorstr='#990033', GradientType=0)
+/* IE6-9 */
 
 
 .services__list
-	display: flex
-	flex-wrap: wrap
-	justify-content: space-between
-	align-items: flex-end
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: flex-end
 
 .services__item
-	margin-bottom: 50px
-	a
-		margin-right: 20px
-		display: flex
-		flex-direction: column
-		align-items: center
+    margin-bottom: 50px
+    a
+        margin-right: 20px
+        display: flex
+        flex-direction: column
+        align-items: center
 
 .services__icon
-	box-sizing: content-box
-	max-width: 51px
-	max-height: 51px
-	padding-bottom: 15px
-	border-bottom: 1px solid $blue
+    box-sizing: content-box
+    max-width: 51px
+    max-height: 51px
+    padding-bottom: 15px
+    border-bottom: 1px solid $blue
 
 .section__text
-	+text--16
+    +text--16
 
 .red-stripe__title
-	+title--24
+    +title--24
 
 .section__title
-	+title--24u
-
+    +title--24u
 
 .contacts__list
-	display: flex
+    display: flex
+    padding-left: 0
 
 .contacts__list--map
-	flex-direction: column
-	border-bottom: 2px solid $accent
-	margin-top: 0
-	li
-		margin-bottom: 20px
-		a
-			color: $black
+    flex-direction: column
+    border-bottom: 2px solid $accent
+    margin-top: 0
+    li
+        margin-bottom: 20px
+        a
+            color: $black
 
 .header__top
-	display: flex
-	min-height: 75px
-	justify-content: flex-start
-	align-items: center
+    display: flex
+    min-height: 75px
+    justify-content: flex-start
+    align-items: center
 
 .logo
-	margin-right: auto
+    margin-right: auto
 
 .contacts__item
-	+text--12b
-	a
-		color: $accent
+    +text--12b
+    a
+        color: $accent
 
 .section--contacts .contacts__item
-	+title--18
-	font-weight: normal
+    +title--18
+    font-weight: normal
 
 .button
-	+text--12bu
-	border: none
-	height: 38px
-	padding: 0 12px
-	-webkit-border-radius: 3px
-	-moz-border-radius: 3px
-	border-radius: 3px
+    +text--12bu
+    border: none
+    height: 38px
+    padding: 0 12px
+    -webkit-border-radius: 3px
+    -moz-border-radius: 3px
+    border-radius: 3px
 
 .button--small
-	height: 20px
-	text-transform: none
+    height: 20px
+    text-transform: none
 
 .button--orange
-	background-color: $sub-accent
-	color: $white
-	&:hover
-		background-color: rgba(236,83,92,0.8)
+    background-color: $sub-accent
+    color: $white
+    &:hover
+        background-color: rgba(236, 83, 92, 0.8)
 
 .lead
-	position: relative
-	display: flex
+    position: relative
+    display: flex
+
 .top__line
-	position: absolute
-	top: 0
-	left: 0
-	z-index: 1
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 1
 
 .section__title
-	height: 100px
-	color: $white
-	padding: 10px
-	z-index: 2
-	min-width: 180px
-	margin: 0
-	display: flex
-	align-items: flex-end
-	justify-content: center
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#990033+0,990033+10,ffffff+10,ffffff+20,990033+20,990033+100 */
-	background: $sub-accent /* Old browsers */
-	background: -moz-linear-gradient(top, $sub-accent 0%, $sub-accent 10%, transparent 10%, transparent 18%, $sub-accent 18%, $sub-accent 100%) /* FF3.6-15 */
-	background: -webkit-linear-gradient(top, $sub-accent 0%,$sub-accent 10%,transparent 10%,transparent 18%,$sub-accent 18%,$sub-accent 100%) /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom, $sub-accent 0%,$sub-accent 10%,transparent 10%,transparent 18%,$sub-accent 18%,$sub-accent 100%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#990033', endColorstr='#990033',GradientType=0 ) /* IE6-9 */
+    height: 100px
+    color: $white
+    padding: 10px
+    z-index: 2
+    min-width: 180px
+    margin: 0
+    display: flex
+    align-items: flex-end
+    justify-content: center
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#990033+0,990033+10,ffffff+10,ffffff+20,990033+20,990033+100 */
+    background: $sub-accent
+    /* Old browsers */
+    background: -moz-linear-gradient(top, $sub-accent 0%, $sub-accent 10%, transparent 10%, transparent 18%, $sub-accent 18%, $sub-accent 100%)
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, $sub-accent 0%, $sub-accent 10%, transparent 10%, transparent 18%, $sub-accent 18%, $sub-accent 100%)
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, $sub-accent 0%, $sub-accent 10%, transparent 10%, transparent 18%, $sub-accent 18%, $sub-accent 100%)
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#990033', endColorstr='#990033', GradientType=0)
+/* IE6-9 */
 
 
 
 .section__text
-	padding-top: 30px
-	padding-right: 10px
-	padding-left: 40px
-	padding-bottom: 30px
+    padding-top: 30px
+    padding-right: 10px
+    padding-left: 40px
+    padding-bottom: 30px
 
 .section__text--blue
-	font-weight: bold
-	color: $black
+    font-weight: bold
+    color: $black
 
 .services__title
-	+text--14bu
-	color: $accent
+    +text--14bu
+    color: $accent
 
 .slider__title
-	+title--34
-	line-height: 1.3
+    +title--34
+    line-height: 1.3
 
 .masters__name
-	+text--16u
-	color: $accent
-	margin: 0
-	margin-top: 10px
+    +text--16u
+    color: $accent
+    margin: 0
+    margin-top: 10px
 
 .masters__position
-	+text--14
-	margin: 0
-	margin-top: 5px
-	margin-bottom: 10px
-	color: $black
+    +text--14
+    margin: 0
+    margin-top: 5px
+    margin-bottom: 10px
+    color: $black
 
 .contacts__welcome
-	+title--30b
-	color: $accent
-	margin: 0
+    +title--30b
+    color: $accent
+    margin: 0
 
 .button--big
-	+text--14bu
+    +text--14bu
 
-.footer__bottom .contacts__title
-	+text--14bu
+.footer__middle .contacts__title
+    +text--14bu
 
 .top__line
-	width: 100%
-	height: 10px
-	margin-bottom: 5px
-	background-color: $accent
+    width: 100%
+    height: 10px
+    margin-bottom: 5px
+    background-color: $accent
 
 .header__bottom
-	position: relative
+    position: relative
+
 .promo
-	display: flex
-	flex-direction: column
-	position: absolute
-	right: 60px
-	top: 40px
-	max-width: 376px
-	border: 5px solid $blue
-	-webkit-border-radius: 5px
-	-moz-border-radius: 5px
-	border-radius: 10px
-	padding: 7px
-	background-image: url("../img/present.png")
-	background-repeat: no-repeat
-	background-position: 95% 5%
+    display: flex
+    flex-direction: column
+    position: absolute
+    right: 60px
+    top: 40px
+    max-width: 376px
+    border: 5px solid $blue
+    -webkit-border-radius: 5px
+    -moz-border-radius: 5px
+    border-radius: 10px
+    padding: 7px
+    background-image: url("../img/present.png")
+    background-repeat: no-repeat
+    background-position: 95% 5%
 
 .promo__text
-	+title--24bu
-	color: $blue
-	line-height: 1.8
+    +title--24bu
+    color: $blue
+    line-height: 1.8
 
 .button--promo
-	margin: 0 auto
+    margin: 0 auto
 
 .slider__item
-	width: 490px
-	height: 490px
-	background-color: transparent
-	border: 12px solid $accent
-	-webkit-border-radius: 50%
-	-moz-border-radius: 50%
-	border-radius: 50%
-	display: flex
-	justify-content: center
-	align-items: center
-	text-align: center
-	color: $white
-	position: relative
-	background-repeat: no-repeat
-	background-position: center center
+    width: 490px
+    height: 490px
+    background-color: transparent
+    border: 12px solid $accent
+    -webkit-border-radius: 50%
+    -moz-border-radius: 50%
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    text-align: center
+    color: $white
+    position: relative
+    background-repeat: no-repeat
+    background-position: center center
 
 .slider__item--1
-	background-image: url("../img/slider1.png")
-.slider__item--2
-	background-image: url("../img/slider1.png")
-.slider__item--3
-	background-image: url("../img/slider1.png")
+    background-image: url("../img/slider1.png")
 
+.slider__item--2
+    background-image: url("../img/slider1.png")
+
+.slider__item--3
+    background-image: url("../img/slider1.png")
 
 .slider__logo
-	position: absolute
-	bottom: 50px
+    position: absolute
+    bottom: 50px
 
 .masters__list
-	display: flex
-	flex-wrap: wrap
-	justify-content: space-between
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
 
 .masters__item
-	margin-right: 30px
-	margin-bottom: 40px
-	a
-		display: flex
-		flex-direction: column
-		align-items: center
+    margin-right: 30px
+    margin-bottom: 40px
+    a
+        display: flex
+        flex-direction: column
+        align-items: center
 
 .contacts
-	display: flex
+    display: flex
 
 .map
-	min-width: 515px
-	max-height: 515px
-	border: 10px solid $accent
-	margin-right: 60px
-	-webkit-border-radius: 3px
-	-moz-border-radius: 3px
-	border-radius: 3px
+    min-width: 515px
+    max-height: 515px
+    border: 10px solid $accent
+    margin-right: 60px
+    -webkit-border-radius: 3px
+    -moz-border-radius: 3px
+    border-radius: 3px
 
 .section__form-title
-	+title--18
-	font-weight: bold
-	text-transform: uppercase
-	color: $accent
+    +title--18
+    font-weight: bold
+    text-transform: uppercase
+    color: $accent
 
 .form-group-wrapper
-	display: flex
-	flex-direction: column
+    display: flex
+    flex-direction: column
 
 .form-group
-	margin: 5px 0
-	input
-		border: 1px solid $accent
-		width: 100%
-		padding-left: 5px
-		height: 30px
-	textarea
-		border: 1px solid $accent
-		width: 100%
-		padding-left: 5px
-	& *:focus
-		outline: 1px solid $sub-accent
+    margin: 5px 0
+    input
+        border: 1px solid $accent
+        width: 100%
+        padding-left: 5px
+        height: 30px
+    textarea
+        border: 1px solid $accent
+        width: 100%
+        padding-left: 5px
+    & *:focus
+        outline: 1px solid $sub-accent
 
 .form-group--two-col
-	display: flex
-	input:first-child
-		margin-right: 10px
+    display: flex
+    input:first-child
+        margin-right: 10px
 
 .hidden
-	position: absolute
-	width: 1px
-	height: 1px
-	margin: -1px
-	border: 0
-	padding: 0
-	clip: rect(0 0 0 0)
-	overflow: hidden
+    position: absolute
+    width: 1px
+    height: 1px
+    margin: -1px
+    border: 0
+    padding: 0
+    clip: rect(0 0 0 0)
+    overflow: hidden
 
 .contacts__link
-	display: flex
-	align-items: center
-	i
-		font-size: 1.5em
-		margin-right: 10px
+    display: flex
+    align-items: center
+    i
+        font-size: 1.5em
+        margin-right: 10px
 
 .contacts__list--header
-	align-items: center
-	margin: 0
-	.contacts__item
-		margin-right: 20px
+    align-items: center
+    margin: 0
+    .contacts__item
+        margin-right: 20px
 
 .social__list
-	display: flex
-	font-size: 1.5em
-	margin: 0
-	li
-		margin-right: 10px
-		&:last-child
-			margin-right: 0
-	a
-		color: $accent
+    display: flex
+    font-size: 1.5em
+    margin: 0
+    li
+        margin-right: 10px
+        &:last-child
+            margin-right: 0
+    a
+        color: $accent
 
 .footer
-	background-color: $accent
+    background-color: $accent
+
+.footer__middle
+    display: flex
+    justify-content: space-between
+    .contacts__list
+        display: flex
+        justify-content: space-between
+        max-width: 620px
+        flex-grow: 2
+        margin: 0
+    .contacts__item
+        margin-right: 20px
+    .contacts__title
+        color: rgba(255,255,255,0.5)
+        border-bottom: 1px solid $white
+        +text--14bu
+    .contacts__data
+        display: block
+
+        color: $white
+        font-weight: normal
 
 .footer__bottom
-	.contacts__item
-		margin-right: 20px
-	.contacts__title
-		color: $white
-		opacity: 0.5
-	.contacts__data
-		display: block
-		border-top: 1px solid $white
-		color: $white
-		font-weight: normal
+    color: rgba(255,255,255,0.5);
+    +text--14b
 
 
-@import "media" // Всегда в конце
+.footer__top
+    height: 70px
+    display: flex
+    align-items: center
+
+@import "media"
+// Всегда в конце
