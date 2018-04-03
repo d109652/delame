@@ -452,6 +452,16 @@ a:hover
     a
         color: $accent
 
+.social--footer
+    flex-basis: 154px
+    .social__list
+        justify-content: space-between
+
+        padding: 0
+        a
+            color: $white
+            font-size: 1.3em
+
 .footer
     background-color: $accent
 
@@ -469,6 +479,8 @@ a:hover
     .contacts__title
         color: rgba(255,255,255,0.5)
         border-bottom: 1px solid $white
+        padding-bottom: 3px
+        margin-bottom: 5px
         +text--14bu
     .contacts__data
         display: block
@@ -477,8 +489,10 @@ a:hover
         font-weight: normal
 
 .footer__bottom
-    color: rgba(255,255,255,0.5);
+    color: rgba(255,255,255,0.5)
     +text--14b
+    height: 26px
+    text-align: right
 
 
 .footer__top
