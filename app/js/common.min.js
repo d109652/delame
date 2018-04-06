@@ -2,6 +2,8 @@ $('.slider').slick({
     centerMode: true,
     centerPadding: '60px',
     slidesToShow: 1,
+    prevArrow: $('.slider__arrow--prev'),
+    nextArrow: $('.slider__arrow--next'),
     responsive: [
         {
             breakpoint: 768,

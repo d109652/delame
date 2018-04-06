@@ -122,7 +122,7 @@
                 <img src="img/inside2.png" alt="Фото салона" class="gallery_img">
             </section>-->
 
-            <section class="gallery gallery--fullscreen">
+            <section class="gallery gallery--normal">
                 <!--(picture[class="gallery__full-img"]>img[src="img/gallery/inside$.jpg" srcset="img/gallery/inside$.jpg 220w , img/gallery/inside$@big.jpg 800w" sizes="(max-width: 220px) 220px,
                 (max-width: 221px) 800px" alt="Фото салона" class="gallery_img-thumb"])*23 -->
                 <picture class="gallery__full-img"><img src="img/gallery/inside1.jpg" alt="Фото салона"
@@ -334,18 +334,30 @@
                         Необходима предварительная запись!</p>
                 </div>
             </section>
-            <section class="slider">
-                <div class="slider__item slider__item--1">
-                    <p class="slider__title">Комплекс стрижка+полировка со скидкой 20%</p>
-                    <img src="img/logo_white.png" width="156" height="40" class="slider__logo"/>
+            <section class="slider__container">
+                <div class="slider__arrows">
+                    <button class="slider__arrow slider__arrow--prev"><i class="fas fa-chevron-circle-left"></i></button>
+                    <button class="slider__arrow slider__arrow--next"><i class="fas fa-chevron-circle-right"></i></button>
                 </div>
-                <div class="slider__item slider__item--2">
-                    <p class="slider__title">Комплекс стрижка+полировка со скидкой 20%</p>
-                    <img src="img/logo_white.png" width="156" height="40" class="slider__logo"/>
+                <div class="slider">
+                    <div class="slide__wrapper">
+                        <div class="slide__item slide__item--1">
+                            <p class="slide__title">Комплекс стрижка+полировка со скидкой 20%</p>
+                            <img src="img/logo_white.png" width="156" height="40" class="slide__logo"/>
+                        </div>
                 </div>
-                <div class="slider__item slider__item--3">
-                    <p class="slider__title">Комплекс стрижка+полировка со скидкой 20%</p>
-                    <img src="img/logo_white.png" width="156" height="40" class="slider__logo"/>
+                    <div class="slide__wrapper">
+                        <div class="slide__item slide__item--2">
+                            <p class="slide__title">Комплекс стрижка+полировка со скидкой 20%</p>
+                            <img src="img/logo_white.png" width="156" height="40" class="slide__logo"/>
+                        </div>
+                    </div>
+                    <div class="slide__wrapper">
+                        <div class="slide__item slide__item--3">
+                            <p class="slide__title">Комплекс стрижка+полировка со скидкой 20%</p>
+                            <img src="img/logo_white.png" width="156" height="40" class="slide__logo"/>
+                        </div>
+                </div>
                 </div>
             </section>
         </div>
@@ -594,19 +606,19 @@
                     <ul class="contacts__list contacts__list--map">
                         <li class="contacts__item address">
                             <a href="https://yandex.ru/maps/-/CBe~74blGB" rel="noopener" target="_blank">
-                                <i></i>
+                                <i class="fas fa-location-arrow"></i>
                                 <span>МО, г.Долгопрудный, <br>Лихачевский проспект, 70к4</span>
                             </a>
                         </li>
                         <li class="contacts__item phone">
                             <a href="tel:+74987446611" rel="noopener" target="_blank">
-                                <i></i>
+                                <i class="fas fa-mobile"></i>
                                 <span>+7(498)744-66-11</span>
                             </a>
                         </li>
                         <li class="contacts__item">
                             <a class="contacts__data" href="mailto:delame@inbox.ru"></a>
-                            <i></i>
+                            <i class="fas fa-envelope"></i>
                             <span>delame@inbox.ru</span>
                             </a>
                         </li>

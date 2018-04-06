@@ -63,6 +63,9 @@ a
 a:hover
     text-decoration: none
 
+.fas
+    color: $accent
+
 .img-responsive
     display: block
     max-width: 100%
@@ -124,6 +127,7 @@ a:hover
     flex-grow: 1
     a
         +nav
+        white-space: nowrap
         display: flex
         justify-content: center
         align-items: center
@@ -273,7 +277,7 @@ a:hover
     +text--14bu
     color: $accent
 
-.slider__title
+.slide__title
     +title--34
     line-height: 1.3
 
@@ -326,6 +330,12 @@ a:hover
     background-repeat: no-repeat
     background-position: 95% 5%
 
+.send-message
+    display: flex
+    flex-direction: column
+    button
+        margin: 0 auto
+
 .promo__text
     +title--24bu
     color: $blue
@@ -334,8 +344,12 @@ a:hover
 .button--promo
     margin: 0 auto
 
-.slider__item
-    width: 490px
+.slide__wrapper
+    width: 100%
+
+
+.slide__item
+    max-width: 490px
     height: 490px
     background-color: transparent
     border: 12px solid $accent
@@ -350,19 +364,45 @@ a:hover
     position: relative
     background-repeat: no-repeat
     background-position: center center
+    margin: 0 auto
 
-.slider__item--1
+.slide__item--1
     background-image: url("../img/slider1.png")
 
-.slider__item--2
+.slide__item--2
     background-image: url("../img/slider1.png")
 
-.slider__item--3
+.slide__item--3
     background-image: url("../img/slider1.png")
 
-.slider__logo
+.slide__logo
     position: absolute
     bottom: 50px
+
+.slider__container
+    position: relative
+
+.slider__arrows
+    position: absolute
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.slider__arrow
+    color: $accent
+    border: none
+    font-size: 3em
+    z-index: 3
+    background-color: transparent
+
+.slider__arrow--prev
+    padding-left: calc((100% - 489px)/2 - (15px + 51px))
+.slider__arrow--next
+    padding-right: calc((100% - 489px)/2 - (15px + 51px))
+
+
 
 .masters__list
     display: flex
