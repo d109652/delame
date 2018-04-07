@@ -91,9 +91,14 @@ a:hover
     display: flex
     justify-content: space-around
     align-items: center
+    @media #{$desktop}
+        padding: 0 10px
 
 .section--red-stripe
     background-color: $accent
+
+.section--grey
+    background-color: $background
 
 .red-stripe__title
     color: $white
@@ -197,6 +202,11 @@ a:hover
     min-height: 75px
     justify-content: flex-start
     align-items: center
+    @media #{$desktop}
+        padding: 0 10px
+        justify-content: space-between
+    .logo
+        margin-right: 20px
 
 .logo
     margin-right: auto
@@ -419,6 +429,10 @@ a:hover
 
 .contacts
     display: flex
+    @media #{$desktop}
+        padding: 0 10px
+        flex-direction: column
+        align-items: center
 
 .map
     min-width: 515px
@@ -428,7 +442,9 @@ a:hover
     -webkit-border-radius: 3px
     -moz-border-radius: 3px
     border-radius: 3px
-
+    @media #{$desktop}
+        margin-right: 0
+        margin-bottom: 30px
 .section__form-title
     +title--18
     font-weight: bold
@@ -481,6 +497,10 @@ a:hover
     .contacts__item
         margin-right: 20px
 
+.social--header
+    @media #{$desktop}
+        +hidden
+
 .social__list
     display: flex
     font-size: 1.5em
@@ -504,6 +524,9 @@ a:hover
 
 .footer
     background-color: $accent
+    .section__wrapper
+        @media #{$desktop}
+            padding: 0 10px
 
 .footer__middle
     display: flex
@@ -618,6 +641,8 @@ a:hover
         &:before
             text-shadow: 0 0 16px rgba(0,0,0,0.2)
 
+.phone
+    white-space: nowrap
 
 @import "media"
 // Всегда в конце
