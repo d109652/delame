@@ -26,50 +26,56 @@ $('.slider').slick({
     ]
 });
 
-$('.gallery--normal').slick({
-    centerPadding: '40px',
-    dots: true,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    responsive: [
-        {
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: true,
-                dots: true
+function galleryNormal() {
+    $('.gallery--normal').slick({
+        centerPadding: '40px',
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
             }
-        },
-        {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-    ]
-});
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+    });
+}
 
+galleryNormal();
 
-$('.gallery--fullscreen').slick({
-    centerMode: true,
-    centerPadding: '60px',
-    slidesToShow: 1
-});
-
+function galleryFullscreen() {
+    $('.gallery--fullscreen').slick({
+        centerMode: true,
+        centerPadding: '60px',
+        slidesToShow: 1
+    });
+}
+galleryFullscreen();
+/*
 function button() {
     var btn = document.querySelector('.button--gradient')
     btn.onmousemove = function (e) {
@@ -80,7 +86,7 @@ function button() {
     }
 }
 
-button();
+button();*/
 
 $(document).ready(function () {
     $("#menu, #mmMenu").on("click", "a", function (event) {
@@ -119,28 +125,33 @@ jQuery(document).ready(function ($) {
     });
 });
 
-function burgerToggle() {
-    const mmMenu = document.getElementById('mmMenu');
-    const burger = document.querySelector('.hamburger');
-    mmMenu.classList.contains('mm-menu_opened') ? burger.classList.add('is-active') : null
-}
-
-burgerToggle();
-
-var sonlineWidgetOptions = {
-    placeid: 4031
-}
+// function burgerToggle() {
+//     const mmMenu = document.getElementById('mmMenu');
+//     const burger = document.querySelector('.hamburger');
+//     mmMenu.classList.contains('mm-menu_opened') ? burger.classList.add('is-active') : null
+// }
+//
+// burgerToggle();
 
 function fullScreenGallery() {
-    const links = document.querySelectorAll(".gallery__full-img");
-    const gallery = document.querySelector(".gallery");
+    const gallery = document.querySelector(".gallery--normal");
+    const fullscreenGallery = document.querySelector(".gallery--fullscreen");
+    const closeButton = document.querySelector(".gallery__button-close");
 
-    for(let link of links) {
-        link.addEventListener("click", function () {
-            link.preventDefault();
-            gallery.classList.toggle("gallery--normal");
-            gallery.classList.toggle("gallery--fullscreen");
-        })
-    }
+    function toggleFSgallery() {
+            fullscreenGallery.classList.toggle("hidden");
+            closeButton.classList.toggle('hidden');
+        }
+    gallery.addEventListener("click", function (ev) {
+        document.body.style.overflow = "hidden";
+        toggleFSgallery();
+        $('.gallery--fullscreen').slick('slickGoTo', ev.target.parentNode.getAttribute('data-slick-index'), true)
+    });
+
+    closeButton.addEventListener("click", function () {
+        document.body.style.overflow = "";
+        toggleFSgallery();
+    });
+
 }
 fullScreenGallery();
