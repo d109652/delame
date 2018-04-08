@@ -55,6 +55,10 @@ body
 ul
     list-style-type: none
 
+p
+    margin: 0
+    padding: 0
+
 a
     text-decoration: none
     -webkit-font-smoothing: antialiased
@@ -93,6 +97,11 @@ a:hover
     align-items: center
     @media #{$desktop}
         padding: 0 10px
+    @media #{$phone}
+        flex-direction: column
+        align-items: center
+        text-align: center
+        padding: 10px
 
 .section--red-stripe
     background-color: $accent
@@ -103,12 +112,31 @@ a:hover
 .red-stripe__title
     color: $white
 
+
 .header
     background-image: url("../img/main.png")
     height: 630px
     background-position: center
     background-repeat: no-repeat
     background-size: cover
+
+.nav--mobile
+    display: none
+    @media #{$tablet}
+        height: 52px
+        background-color: $accent
+        justify-content: space-between
+        display: flex
+        align-items: center
+        padding: 0 25px
+
+.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before
+    background-color: $white
+
+.nav--desktop
+
+    @media #{$tablet}
+        display: none
 
 .nav__list
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#990033+0,990033+10,ffffff+10,ffffff+20,990033+20,990033+100 */
@@ -180,6 +208,9 @@ a:hover
 
 .red-stripe__title
     +title--24
+    @media #{$phone}
+        font-size: 1em
+        margin-bottom: 10px
 
 .section__title
     +title--24u
@@ -207,6 +238,8 @@ a:hover
         justify-content: space-between
     .logo
         margin-right: 20px
+        @media #{$tablet}
+            display: none
 
 .logo
     margin-right: auto
@@ -242,6 +275,9 @@ a:hover
 .lead
     position: relative
     display: flex
+    @media #{$phone}
+        flex-direction: column
+        align-items: flex-start
 
 .top__line
     position: absolute
@@ -339,6 +375,9 @@ a:hover
     background-image: url("../img/present.png")
     background-repeat: no-repeat
     background-position: 95% 5%
+    @media #{$phone}
+        right: calc((100% - 300px) / 2)
+        width: 300px
 
 .send-message
     display: flex
@@ -435,8 +474,8 @@ a:hover
         align-items: center
 
 .map
-    min-width: 515px
-    max-height: 515px
+    width: 515px
+    height: 470px
     border: 10px solid $accent
     margin-right: 60px
     -webkit-border-radius: 3px
@@ -445,6 +484,10 @@ a:hover
     @media #{$desktop}
         margin-right: 0
         margin-bottom: 30px
+    @media #{$tablet}
+        width: 320px
+        height: 320px
+
 .section__form-title
     +title--18
     font-weight: bold
@@ -494,12 +537,23 @@ a:hover
 .contacts__list--header
     align-items: center
     margin: 0
+    @media #{$tablet}
+        width: 100%
     .contacts__item
         margin-right: 20px
+    .address span
+        @media #{$tablet}
+            display: none
+    .work-hours span
+        @media #{$tablet}
+            display: none
+    .phone
+        @media #{$tablet}
+            margin-left: auto
 
 .social--header
     @media #{$desktop}
-        +hidden
+        display: none
 
 .social__list
     display: flex
@@ -643,6 +697,10 @@ a:hover
 
 .phone
     white-space: nowrap
+
+.mobile-hidden
+    @media #{$phone}
+        display: none
 
 @import "media"
 // Всегда в конце

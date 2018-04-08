@@ -125,13 +125,13 @@ jQuery(document).ready(function ($) {
     });
 });
 
-// function burgerToggle() {
-//     const mmMenu = document.getElementById('mmMenu');
-//     const burger = document.querySelector('.hamburger');
-//     mmMenu.classList.contains('mm-menu_opened') ? burger.classList.add('is-active') : null
-// }
-//
-// burgerToggle();
+/*function burgerToggle() {
+    const mmMenu = document.getElementById('mmMenu');
+    const burger = document.querySelector('.hamburger');
+    mmMenu.classList.contains('mm-menu_opened') ? burger.classList.add('is-active') : null
+}
+
+burgerToggle();*/
 
 function fullScreenGallery() {
     const gallery = document.querySelector(".gallery--normal");
@@ -155,3 +155,22 @@ function fullScreenGallery() {
 
 }
 fullScreenGallery();
+
+function showMap() {
+    const map = document.querySelector('.map');
+    const bigMap ='<a href="https://yandex.ru/maps/?um=constructor%3A5898ff99bd04b9bc7b80969c478fac587bab936019d65016f6974e9f4cffc417&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A5898ff99bd04b9bc7b80969c478fac587bab936019d65016f6974e9f4cffc417&amp;width=495&amp;height=450&amp;lang=ru_RU" alt="" style="border: 0;" /></a>';
+    const smallMap = '<a href="https://yandex.ru/maps/?um=constructor%3A5898ff99bd04b9bc7b80969c478fac587bab936019d65016f6974e9f4cffc417&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A5898ff99bd04b9bc7b80969c478fac587bab936019d65016f6974e9f4cffc417&amp;width=300&amp;height=300&amp;lang=ru_RU" alt="" style="border: 0;" /></a>';
+
+    if (window.matchMedia("(min-width: 768px)").matches) {
+        /* the viewport is at least 768 pixels wide */
+        let div = document.createElement('div');
+        div.innerHTML = bigMap;
+        map.appendChild(div);
+    } else {
+        /* the viewport is less than 768 pixels wide */
+        let div = document.createElement('div');
+        div.innerHTML = smallMap;
+        map.appendChild(div);
+    }
+}
+showMap();
