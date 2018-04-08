@@ -29,8 +29,9 @@ $('.slider').slick({
 function galleryNormal() {
     $('.gallery--normal').slick({
         centerPadding: '40px',
-        dots: true,
+        dots: false,
         infinite: false,
+        arrows: true,
         speed: 300,
         slidesToShow: 4,
         slidesToScroll: 4,
@@ -41,7 +42,7 @@ function galleryNormal() {
                     slidesToShow: 3,
                     slidesToScroll: 3,
                     infinite: true,
-                    dots: true
+                    dots: false
                 }
             },
             {
