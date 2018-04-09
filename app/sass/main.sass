@@ -91,12 +91,10 @@ a:hover
     padding-bottom: 80px
 
 .section--red-stripe .section__wrapper
-    padding: 0
+    padding: 20px 10px
     display: flex
     justify-content: space-around
     align-items: center
-    @media #{$desktop}
-        padding: 0 10px
     @media #{$phone}
         flex-direction: column
         align-items: center
@@ -187,6 +185,17 @@ a:hover
     flex-wrap: wrap
     justify-content: space-between
     align-items: flex-end
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+    padding: 0
+    @media #{$tablet}
+
+        grid-template-columns: 1fr 1fr 1fr
+    @media #{$phone}
+
+        grid-template-columns: 1fr 1fr
+        align-items: flex-start
+
 
 .services__item
     margin-bottom: 50px
@@ -195,6 +204,12 @@ a:hover
         display: flex
         flex-direction: column
         align-items: center
+        justify-content: space-between
+        height: 129px
+        @media #{$phone}
+            margin-right: 0
+
+
 
 .services__icon
     box-sizing: content-box
@@ -322,10 +337,18 @@ a:hover
 .services__title
     +text--14bu
     color: $accent
+    text-align: center
+    @media #{$phone}
+        font-size: 0.8em
+        min-height: 42px
+
 
 .slide__title
     +title--34
     line-height: 1.3
+    @media #{$phone}
+        font-size: 1.5em
+        min-height: 42px
 
 .masters__name
     +text--16u
@@ -414,6 +437,10 @@ a:hover
     background-repeat: no-repeat
     background-position: center center
     margin: 0 auto
+    @media #{$phone}
+        background-size: cover
+        max-width: 280px
+        height: 280px
 
 .slide__item--1
     background-image: url("../img/slider1.png")
@@ -427,6 +454,8 @@ a:hover
 .slide__logo
     position: absolute
     bottom: 50px
+    @media #{$phone}
+        bottom: 35px
 
 .slider__container
     position: relative
@@ -448,8 +477,14 @@ a:hover
 
 .slider__arrow--prev
     padding-left: calc((100% - 489px)/2 - (15px + 51px))
+    @media #{$phone}
+        align-self: flex-start
+        padding-left: 10px
 .slider__arrow--next
     padding-right: calc((100% - 489px)/2 - (15px + 51px))
+    @media #{$phone}
+        align-self: flex-end
+        padding-right: 10px
 
 
 
@@ -568,6 +603,8 @@ a:hover
 
 .social--footer
     flex-basis: 154px
+    @media #{$phone}
+        display: none
     .social__list
         justify-content: space-between
 
@@ -576,11 +613,17 @@ a:hover
             color: $white
             font-size: 1.3em
 
+
+
 .footer
     background-color: $accent
     .section__wrapper
         @media #{$desktop}
             padding: 0 10px
+        @media #{$phone}
+            display: flex
+            flex-direction: row
+            padding-top: 10px
 
 .footer__middle
     display: flex
@@ -591,6 +634,8 @@ a:hover
         max-width: 620px
         flex-grow: 2
         margin: 0
+        @media #{$phone}
+            flex-direction: column
     .contacts__item
         margin-right: 20px
     .contacts__title
@@ -616,6 +661,23 @@ a:hover
     height: 70px
     display: flex
     align-items: center
+    @media #{$phone}
+        align-items: flex-start
+        flex-direction: column
+        margin-right: 40px
+
+
+.social--footer-mobile
+    display: none
+    @media #{$phone}
+        color: $white
+        display: block
+    i
+        color: $white
+    .social__list
+        padding: 0
+        justify-content: space-between
+        width: 100%
 
 .gallery_img
     margin-right: 5px
