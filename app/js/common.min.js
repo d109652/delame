@@ -35,6 +35,8 @@ function galleryNormal() {
         speed: 300,
         slidesToShow: 4,
         slidesToScroll: 4,
+        prevArrow: '<i class="fas fa-angle-left"></i>',
+        nextArrow: '<i class="fas fa-angle-right"></i>',
         responsive: [
             {
                 breakpoint: 1024,
@@ -135,7 +137,7 @@ jQuery(document).ready(function ($) {
 burgerToggle();*/
 
 function fullScreenGallery() {
-    const gallery = document.querySelector(".gallery--normal");
+    const images = document.querySelectorAll(".gallery_img-thumb");
     const fullscreenGallery = document.querySelector(".gallery--fullscreen");
     const closeButton = document.querySelector(".gallery__button-close");
 
@@ -143,11 +145,13 @@ function fullScreenGallery() {
             fullscreenGallery.classList.toggle("hidden");
             closeButton.classList.toggle('hidden');
         }
-    gallery.addEventListener("click", function (ev) {
-        document.body.style.overflow = "hidden";
-        toggleFSgallery();
-        $('.gallery--fullscreen').slick('slickGoTo', ev.target.parentNode.getAttribute('data-slick-index'), true)
-    });
+    for(let img of images) {
+        img.addEventListener("click", function (ev) {
+            document.body.style.overflow = "hidden";
+            toggleFSgallery();
+            $('.gallery--fullscreen').slick('slickGoTo', ev.target.parentNode.getAttribute('data-slick-index'), true)
+        });
+    }
 
     closeButton.addEventListener("click", function () {
         document.body.style.overflow = "";
