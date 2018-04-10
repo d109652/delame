@@ -492,15 +492,25 @@ a:hover
     display: flex
     flex-wrap: wrap
     justify-content: space-between
+    @media #{$phone}
+        padding: 0
+        display: grid
+        grid-template-columns: 1fr 1fr
 
 .masters__item
     margin-right: 30px
     margin-bottom: 40px
+    @media #{$phone}
+        margin-right: 0
     a
         display: flex
         flex-direction: column
         align-items: center
 
+        img
+            @media #{$phone}
+                width: 130px
+                height: 130px
 .contacts
     display: flex
     @media #{$desktop}
@@ -624,6 +634,7 @@ a:hover
             display: flex
             flex-direction: row
             padding-top: 10px
+            padding-bottom: 10px
 
 .footer__middle
     display: flex
@@ -646,16 +657,19 @@ a:hover
         +text--14bu
     .contacts__data
         display: block
-
         color: $white
         font-weight: normal
+    .phone
+        @media #{$phone}
+            display: none
 
 .footer__bottom
     color: rgba(255,255,255,0.5)
     +text--14b
     height: 26px
     text-align: right
-
+    @media #{$phone}
+        display: none
 
 .footer__top
     height: 70px
@@ -672,12 +686,14 @@ a:hover
     @media #{$phone}
         color: $white
         display: block
-    i
-        color: $white
-    .social__list
-        padding: 0
-        justify-content: space-between
-        width: 100%
+        i
+            color: $white
+            font-size: 1.3em
+        .social__list
+            margin-top: 10px
+            padding: 0
+            max-width: 125px
+            justify-content: space-between
 
 .gallery_img
     margin-right: 5px
