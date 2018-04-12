@@ -112,28 +112,28 @@ $(function () {
     });
 });
 
-jQuery(document).ready(function ($) {
+
+
+
+jQuery(document).ready(function( $ ) {
     $("#mmMenu").mmenu({
+        "slidingSubmenus": false,
         "extensions": [
             "pagedim-black",
             "position-right"
-        ],
-        "onClick": {
-            close: true
-        },
-        "navbar": {
-            add: false
-        }
+        ]
     });
 });
 
 function burgerToggle() {
     const mmMenu = document.getElementById('mmMenu');
     const burger = document.querySelector('.hamburger');
+
     mmMenu.classList.contains('mm-menu_opened') ? burger.classList.add('is-active') : null
 }
 
 burgerToggle();
+
 
 function fullScreenGallery() {
     const images = document.querySelectorAll(".gallery_img-thumb");
