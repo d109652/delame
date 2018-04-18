@@ -121,7 +121,13 @@ jQuery(document).ready(function( $ ) {
         "extensions": [
             "pagedim-black",
             "position-right"
-        ]
+        ],
+        "navbar" :{
+            "add": false,
+        },
+        "onClick": {
+            "close": true,
+        }
     });
 });
 

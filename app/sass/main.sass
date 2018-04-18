@@ -792,6 +792,20 @@ a:hover
 
 .mm-menu_offcanvas.mm-menu_opened
     z-index: 3
+    background-color: $accent
+    color: $white
+    .mm-listitem
+        border-bottom: 1px solid $white
+        &:after
+            border: none
+    a
+        text-transform: uppercase
+        +nav
+        padding-top: 15px
+        padding-bottom: 15px
+        text-align: center
+        &:hover
+            background-color: $sub-accent
 
 @import "media"
 // Всегда в конце
