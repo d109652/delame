@@ -503,10 +503,10 @@ a:hover
     display: grid
     grid-template-columns: 1fr 1fr 1fr 1fr
     grid-row-gap: 30px
+    padding: 0
     @media #{$tablet}
         grid-template-columns: 1fr 1fr 1fr
     @media #{$phone}
-        padding: 0
         display: grid
         grid-template-columns: 1fr 1fr
 
@@ -671,6 +671,8 @@ a:hover
             flex-direction: column
     .contacts__item
         margin-right: 20px
+        @media #{$phone}
+            margin-right: 0
     .contacts__title
         color: rgba(255,255,255,0.5)
         border-bottom: 1px solid $white
