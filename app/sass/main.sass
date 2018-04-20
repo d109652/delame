@@ -500,20 +500,33 @@ a:hover
     display: flex
     flex-wrap: wrap
     justify-content: space-between
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    grid-row-gap: 30px
+    @media #{$tablet}
+        grid-template-columns: 1fr 1fr 1fr
     @media #{$phone}
         padding: 0
         display: grid
         grid-template-columns: 1fr 1fr
 
+
 .masters__item
     margin-right: 30px
     margin-bottom: 40px
+    @supports (display: grid)
+        margin: 0
+    .button
+        margin-top: auto
+
     @media #{$phone}
         margin-right: 0
     a
         display: flex
         flex-direction: column
         align-items: center
+        justify-content: space-between
+        height: 100%
 
         img
             @media #{$phone}
@@ -819,6 +832,11 @@ a:hover
         text-align: center
         &:hover
             background-color: $sub-accent
+.callback
+    display: flex
+    justify-content: space-between
+    input[type='text']
+        margin-right: 20px
 
 @import "media"
 // Всегда в конце
