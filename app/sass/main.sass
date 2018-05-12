@@ -406,6 +406,8 @@ a:hover
     background-image: url("../img/present.png")
     background-repeat: no-repeat
     background-position: 95% 5%
+    -webkit-background-size: 42px
+    background-size: 42px
     @media #{$phone}
         right: calc((100% - 300px) / 2)
         width: 300px
@@ -839,6 +841,14 @@ a:hover
     justify-content: space-between
     input[type='text']
         margin-right: 20px
+
+.rh-reset.rh-reset.rh-reset.rh-reset.rh-reset.rh-reset.rh-reset.rh-reset
+    opacity: 0
+
+.rc-inactive #rc-phone-back
+    top: -5.5em
+.rc-inactive #rc-phone-highlight
+    display: none
 
 @import "media"
 // Всегда в конце
