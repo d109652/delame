@@ -209,7 +209,9 @@ a:hover
         flex-direction: column
         align-items: center
         justify-content: space-between
-        height: 129px
+        //height: 129px
+        margin-left: 10px
+        margin-right: 10px
         @media #{$phone}
             margin-right: 0
 
@@ -375,6 +377,8 @@ a:hover
     +title--30b
     color: $accent
     margin: 0
+    @media #{$phone}
+        +title--24b
 
 .button--big
     +text--14bu
@@ -529,7 +533,6 @@ a:hover
         align-items: center
         justify-content: space-between
         height: 100%
-
         img
             @media #{$phone}
                 width: 130px
@@ -613,9 +616,11 @@ a:hover
     .address span
         @media #{$tablet}
             display: none
-    .work-hours span
+    .work-hours
         @media #{$tablet}
             display: none
+
+
     .phone
         @media #{$tablet}
             margin-left: auto
